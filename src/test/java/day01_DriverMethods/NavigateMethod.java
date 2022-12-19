@@ -21,7 +21,7 @@ public class NavigateMethod {
         Thread.sleep(3000);
         driver.navigate().back(); // amazon sayfasina geri doner
 
-        // Tekrar hepsiburada sayfasina gidelim
+        // Tekrar techproeducation sayfasina gidelim
         Thread.sleep(3000);
         driver.navigate().forward(); // Techpro ya gider
 

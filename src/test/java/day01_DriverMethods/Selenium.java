@@ -13,6 +13,10 @@ public class Selenium {
         // methodunun icine ilk olarak driver i yazariz. Ikinci olarak driver in fiziki yolunu kopyalariz.
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.amazon.com");
+        // TAF: Tek bir kod dili uzerinden web, masaustu ya da mobil uygulamaların geliştirilmesini saglayan bir arayuzdur. Isımızı rahat yapabilmemiz icin hazirlanmis
+        // calisma ortamimizdir, çerçeve gibi dusunebilirsin.
+
+        // Note: [1671437003.466][WARNING]: Timed out connecting to Chrome, retrying... yazisini siteye fazla giren olunca alirsin(Baglanti zaman asimina ugradi)
 
     }
 }
