@@ -15,19 +15,18 @@ public class Homework01 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        // Amazon sayfasina gidin https://www.amazon.com
+        //Amazon sayfasina gidin https://www.amazon.com
         driver.get("https://www.amazon.com");
 
-        // Sayfanin konumunu ve boyutlarini yazdirin.
-        System.out.println("Sayfanin konumu: " + driver.manage().window().getPosition());
-        System.out.println("Sayfanin boyutlari: " + driver.manage().window().getSize());
+        //Sayfanin konumunu ve boyutlarini yazdirin.
+        System.out.println("The position of the page is: " + driver.manage().window().getPosition());
+        System.out.println("The size of the page is:" + driver.manage().window().getSize());
 
-        // Sayfanin konumunu ve boyutunu istediginiz sekilde ayarlayin
+        //Sayfanin konumunu ve boyutunu istediginiz sekilde ayarlayin
         driver.manage().window().setPosition(new Point(75, 0));
         driver.manage().window().setSize(new Dimension(750, 750));
 
-        // Sayfanin sizin istediginiz konum ve boyuta geldigini test edin
+        //Sayfanin sizin istediginiz konum ve boyuta geldigini test edin
         String actualPosition = String.valueOf(driver.manage().window().getPosition());
         String actualSize = String.valueOf(driver.manage().window().getSize());
         String expectedPosition = "(75, 0)";
@@ -38,8 +37,8 @@ public class Homework01 {
             System.out.println("Position and size test FAILED");
         }
 
-        // Sayfayi kapatin
+        //Sayfayi kapatin
         driver.close();
-
     }
+
 }

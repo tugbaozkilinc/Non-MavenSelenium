@@ -17,25 +17,24 @@ public class Homework02 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        // Amazon sayfasına gidiniz
+        //Amazon sayfasına gidiniz
         driver.get("https://amazon.com");
 
-        // Arama kutusunu locate ediniz
-        WebElement element = driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']"));
+        //Arama kutusunu locate ediniz
+        WebElement searchBox = driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']"));
 
-        // Arama kutusunun tagName'inin input olduğunu test ediniz
-        String actualTagName = element.getTagName();
+        //Arama kutusunun tagName'inin input olduğunu test ediniz
+        String actualTagName = searchBox.getTagName();
         String expectedTagName = "input";
         System.out.println(actualTagName.equals(expectedTagName) ? "TagName test PASSED" : "TagName test FAILED");
 
-        // Arama kutusunun name atributu'nun değerinin field-keywords olduğunu test ediniz
-        String actualAttributeValue = element.getAttribute("name");
+        //Arama kutusunun name atributu'nun değerinin field-keywords olduğunu test ediniz
+        String actualAttributeValue = searchBox.getAttribute("name");
         String expectedAttributeValue = "field-keywords";
         System.out.println(actualAttributeValue.equals(expectedAttributeValue) ? "Attribute value test test PASSED" : "Attribute value test test FAILED");
 
-        // Sayfayı kapatınız
+        //Sayfayı kapatınız
         driver.close();
-
     }
+
 }

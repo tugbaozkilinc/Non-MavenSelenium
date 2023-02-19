@@ -11,11 +11,12 @@ public class ClassWork02 {
 
         System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize(); // Bunu sayfayı açtıktan sonra yapmayı alışkanlık haline getir, cunku butonlar arasında kaymalar olabilir.
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); // Bunu da aliskanlik haline getir. Her bir web elementin sayfaya gelme suresi var o yuzden beklemeliyiz,
-                                                                           // bazı elementler web sayfasına gec yuklenebiliyor, bu sureyi siteye yuklenme durumlarında arttırman gerekir.
-                                                                           // Istenen sayfa acilincaya kadar her bir web element icin max. bekleme suresini belirtir.
-        // ChromeDriver kullanarak, facebook sayfasina gidin ve sayfa basliginin (title) “facebook” oldugunu dogrulayin (verify), degilse dogru basligi yazdirin.
+        driver.manage().window().maximize(); //Bunu sayfayı açtıktan sonra yapmayı alışkanlık haline getir, cunku butonlar arasında kaymalar olabilir.
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); //Bunu da aliskanlik haline getir. Her bir web elementin sayfaya gelme suresi var o yuzden beklemeliyiz,
+                                                                           //bazı elementler web sayfasına gec yuklenebiliyor, bu sureyi siteye yuklenme durumlarında arttırman gerekir.
+                                                                           //Istenen sayfa acilincaya kadar her bir web element icin max. bekleme suresini belirtir.
+
+        //ChromeDriver kullanarak, facebook sayfasina gidin ve sayfa basliginin (title) “facebook” oldugunu dogrulayin (verify), degilse dogru basligi yazdirin.
         driver.get("https://www.facebook.com");
         String actualTitle = driver.getTitle();
         String expectedTitle = "facebook";
@@ -25,17 +26,17 @@ public class ClassWork02 {
             System.out.println("Facebook Title test FAILED. Actual title is: " + actualTitle);
         }
 
-        // Sayfa URL’inin “facebook” kelimesi icerdigini dogrulayin, icermiyorsa “actual” URL’i yazdirin.
+        //Sayfa URL’inin “facebook” kelimesi icerdigini dogrulayin, icermiyorsa “actual” URL’i yazdirin.
         String actualUrl = driver.getCurrentUrl();
         if(actualUrl.contains("facebook")){
             System.out.println("Url test PASSED");
         } else
             System.out.println("Url test FAILED. Actual url is: " + actualUrl);
 
-        // https://www.walmart.com/ sayfasina gidin.
+        //https://www.walmart.com/ sayfasina gidin.
         driver.get("https://www.walmart.com");
 
-        // Sayfa basliginin “Walmart.com” icerdigini dogrulayin.
+        //Sayfa basliginin “Walmart.com” icerdigini dogrulayin.
         String actualWalmartTitle = driver.getTitle();
         String expectedWalmartTitle = "Walmart.com";
         if(actualWalmartTitle.contains(expectedWalmartTitle)){
@@ -43,14 +44,14 @@ public class ClassWork02 {
         } else
             System.out.println("Walmart Title test FAILED");
 
-        // Tekrar “facebook” sayfasina donun
+        //Tekrar “facebook” sayfasina donun
         driver.navigate().back();
 
-        // Sayfayi yenileyin
+        //Sayfayi yenileyin
         driver.navigate().refresh();
 
-        // Browser’i kapatin
+        //Browser’i kapatin
         driver.close();
-
     }
+
 }

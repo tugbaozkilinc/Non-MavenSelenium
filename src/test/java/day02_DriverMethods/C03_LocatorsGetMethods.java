@@ -16,22 +16,21 @@ public class C03_LocatorsGetMethods {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        // Amazon sayfasina gidelim
+        //Amazon sayfasina gidelim
         driver.get("https://amazon.com");
 
-        // Search bolumunu locate edip, iphone aratalim
+        //Search bolumunu locate edip, iphone aratalim
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
 
-        // Arama sonuc yazisini konsola yazdiralim.
-        WebElement element = driver.findElement(By.className("sg-col-inner")); // Amazon sayfasina gel=> 1-16 of 241 results for "iphone"=> "iphone" inspect
-        System.out.println(element.getText()); // 1-16 of 241 results for "iphone"
+        //Arama sonuc yazisini konsola yazdiralim.
+        WebElement element = driver.findElement(By.className("sg-col-inner")); //Amazon sayfasina gel=> 1-16 of 241 results for "iphone"=> "iphone" inspect
+        System.out.println(element.getText()); //1-16 of 241 results for "iphone"
 
-        // Sayfayi kapatalim
+        //Sayfayi kapatalim
         driver.close();
 
-        // webElement.submit() ile Keys.ENTER in farki; bazen siteler search butonuna yazdiktan sonra enter a basmayi kabul etmez, search butonuna basman gerekir. Keys.ENTER in islemedigini
-        // gordugunde search butonunu locate eder submit() i kullanirsin.
-
+        //webElement.submit() ile Keys.ENTER in farki; bazen siteler search butonuna yazdiktan sonra enter a basmayi kabul etmez, search butonuna basman gerekir. Keys.ENTER in islemedigini
+        //gordugunde search butonunu locate eder submit() i kullanirsin.
     }
+
 }

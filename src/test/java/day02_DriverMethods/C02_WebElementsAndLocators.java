@@ -13,47 +13,44 @@ public class C02_WebElementsAndLocators {
 
     public static void main(String[] args) {
 
-        // Note: Web elementlerin hepsi tag ve attribute degerlere sahip. Biz de bu web elementlere ulasmak icin tag ve attribute degerleri adres gosterecegiz(Bunlarla ulasilamayan
-        // web elementler icin ozel olarak tanimlanan xpath ve css locator lar kullanilir.), nasıl manuel
-        // olarak bu web elementlerde islem yapıyorsak bu sekilde o islemleri otomasyonlastıracagız. Otomasyon icin unique web elementlerini tanimlamak uzere HTML kodunu inceleyecegiz. (inspect).
-        // Selenium locators, web sayfasindaki web ogelerini tanimlamak icin kullanilir.
-        // Bir web elementini tanimlamak icin 8 tane Selenium locator vardir; id(en hizli ve guvenli locator secenegi), name, className, tagName, linkText, partialLinkText,
-        // xpath(xpath yazmanin birden fazla yolu vardir.), cssSelector(cssSelector yazmanin birden fazla yolu vardir.)
+        //Note: Web elementlerin hepsi tag ve attribute degerlere sahip. Biz de bu web elementlere ulasmak icin tag ve attribute degerleri adres gosterecegiz(Bunlarla ulasilamayan
+        //web elementler icin ozel olarak tanimlanan xpath ve css locator lar kullanilir.), nasıl manuel
+        //olarak bu web elementlerde islem yapıyorsak bu sekilde o islemleri otomasyonlastıracagız. Otomasyon icin unique web elementlerini tanimlamak uzere HTML kodunu inceleyecegiz. (inspect).
+        //Selenium locators, web sayfasindaki web ogelerini tanimlamak icin kullanilir.
+        //Bir web elementini tanimlamak icin 8 tane Selenium locator vardir; id(en hizli ve guvenli locator secenegi), name, className, tagName, linkText, partialLinkText,
+        //xpath(xpath yazmanin birden fazla yolu vardir.), cssSelector(cssSelector yazmanin birden fazla yolu vardir.)
 
         System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        // Amazon sayfasina gidelim.
+        //Amazon sayfasina gidelim.
         driver.get("https://amazon.com");
 
-        // Search bolumunu locate edelim. (Web elementini kullanabilmek icin once locate yapiyoruz.)
-        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox")); // Locate ettigimiz web elementini kullanabilmek icin bir variable a atama yapariz.
-                                                                                 // Tanimladigimiz web elementin yerini driver in bulabilmesi icin findElement(locator) methodunu kullaniriz.
-        // Search bolumunde iphone aratalim.
+        //Search bolumunu locate edelim. (Web elementini kullanabilmek icin once locate yapiyoruz.)
+        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox")); //Locate ettigimiz web elementini kullanabilmek icin bir variable a atama yapariz.
+                                                                                 //Tanimladigimiz web elementin yerini driver in bulabilmesi icin findElement(locator) methodunu kullaniriz.
+        //Search bolumunde iphone aratalim.
         searchBox.sendKeys("iphone", Keys.ENTER);
 
-        // Eger bir web elementi (web sayfasindaki her bir buton ya da text) locate (konumunu belirleme) etmek istersek once manuel olarak web sayfasini acip sayfa uzerinde
-        // sag click yapip incele(inspect) ye tiklariz. Karsimiza cikan html kodlarindan locater lardan(konum belirleyiciler) essiz olani seceriz. Genellikle id attribute u kullanilir.
-        // Sectigimiz attribute degerini findElement(locator) method unun icine parameter olarak yazacagimiz locator in 8 locator dan hangisi oldugunu belirtmek icin
-        // By.locatorTuru("attribute degeri(locate bilgisi)") seklinde yazariz.
+        //Eger bir web elementi (web sayfasindaki her bir buton ya da text) locate (konumunu belirleme) etmek istersek once manuel olarak web sayfasini acip sayfa uzerinde
+        //sag click yapip incele(inspect) ye tiklariz. Karsimiza cikan html kodlarindan locator lardan(konum belirleyiciler) essiz olani seceriz. Genellikle id attribute u kullanilir.
+        //Sectigimiz attribute degerini findElement(locator) method unun icine parameter olarak yazacagimiz locator in 8 locator dan hangisi oldugunu belirtmek icin
+        //By.locatorTuru("attribute degeri(locate bilgisi)") seklinde yazariz.
 
-        // Amazon sayfasındaki <input> ve <a> tag larinin sayisini yazdiriniz.
-        List<WebElement> inputTags = driver.findElements(By.tagName("input")); // findElements() locator degerine uygun web elementlerin listesini dondurur.
+        //Amazon sayfasındaki <input> ve <a> tag larinin sayisini yazdiriniz.
+        List<WebElement> inputTags = driver.findElements(By.tagName("input")); //findElements() locator degerine uygun web elementlerin listesini dondurur.
         System.out.println("Input tag number is: " + inputTags.size());
 
         List<WebElement> aTags = driver.findElements(By.tagName("a"));
         System.out.println("A tag number is: " + aTags.size());
 
-        // Linkleri yazdiralim.
+        //Linkleri yazdiralim.
         for(WebElement w : aTags){
-            System.out.println(w.getText()); // Linkleri yazdirdik.
+            System.out.println(w.getText()); //Linkleri yazdirdik.
         }
 
-        // Not attribute un unique olup olmadıgını anlamak icin, inspect dedikten sonra ctrl+f e bas search butonuna gec. Mesela search butonuna id yazarsan sana 1 match geldigini
-        // gorursun. Ama garanti olsun diye ogrendikten sonra xpath kullanacagiz. Bunu asagiya id yazmadan soyle de yapabilirsin; id="" attribute unun degerini ctrl+c ile kopyala
-        // ve ctrl+f ile search bolumune ata.(Daha once bir attribute ismi yazdiysan ctrl+c/ctrl+f/ctrl+v)
-
+        //Not attribute un unique olup olmadıgını anlamak icin, inspect dedikten sonra ctrl+f e bas search butonuna gec. Mesela search butonuna id yazarsan sana 1 match geldigini gorursun.
     }
+
 }

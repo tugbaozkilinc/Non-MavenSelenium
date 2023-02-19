@@ -9,28 +9,27 @@ public class NavigateMethod {
 
         System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-
-        // Amazon sayfasina gidelim
+        //Amazon sayfasina gidelim
         driver.navigate().to("https://amazon.com");
 
-        // techproeducation sayfasina gidelim
-        Thread.sleep(3000); // 3 sn bekler
+        //techproeducation sayfasina gidelim
+        Thread.sleep(3000); //3 sn bekler
         driver.navigate().to("https://techproeducation.com");
 
-        // Tekrar amazon sayfasina donelim
+        //Tekrar amazon sayfasina donelim
         Thread.sleep(3000);
-        driver.navigate().back(); // amazon sayfasina geri doner
+        driver.navigate().back(); //amazon sayfasina geri doner
 
-        // Tekrar techproeducation sayfasina gidelim
+        //Tekrar techproeducation sayfasina gidelim
         Thread.sleep(3000);
-        driver.navigate().forward(); // Techpro ya gider
+        driver.navigate().forward(); //Techpro ya gider
 
-        // Son sayfada sayfayi yenileyelim
+        //Son sayfada sayfayi yenileyelim
         Thread.sleep(3000);
         driver.navigate().refresh();
 
-        // ve sayfayi kapatalim
+        //ve sayfayi kapatalim
         driver.close();
-
     }
+
 }

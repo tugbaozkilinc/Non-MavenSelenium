@@ -15,21 +15,20 @@ public class Homework01 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        // https://www.amazon.com/ adresine gidin
+        //https://www.amazon.com/ adresine gidin
         driver.get("https://www.amazon.com/");
 
-        // Sayfayi “refresh” yapin
+        //Sayfayi “refresh” yapin
         driver.navigate().refresh();
 
-        // "Salesforce Apex Questions Bank" icin arama yapiniz
+        //"Salesforce Apex Questions Bank" icin arama yapiniz
         driver.findElement(By.xpath("//*[@id='twotabsearchtextbox']")).sendKeys("Salesforce Apex Questions Bank", Keys.ENTER);
 
-        // Kac sonuc bulundugunu yaziniz
+        //Kac sonuc bulundugunu yaziniz
         System.out.println(driver.findElement(By.xpath("//*[text()='4 results for']")).getText());
 
-        // Sayfayi kapatin
+        //Sayfayi kapatin
         driver.close();
-
     }
+
 }
