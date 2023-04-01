@@ -20,7 +20,6 @@ public class C02_WebElementsAndLocators {
         //Bir web elementini tanimlamak icin 8 tane Selenium locator vardir; id(en hizli ve guvenli locator secenegi), name, className, tagName, linkText, partialLinkText,
         //xpath(xpath yazmanin birden fazla yolu vardir.), cssSelector(cssSelector yazmanin birden fazla yolu vardir.)
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

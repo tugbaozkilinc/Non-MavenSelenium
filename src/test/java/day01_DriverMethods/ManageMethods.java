@@ -7,7 +7,6 @@ public class ManageMethods {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         //Amazon soyfasina gidelim. https://www.amazon.com/
         driver.get("https://amazon.com");

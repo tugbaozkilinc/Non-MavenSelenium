@@ -12,7 +12,6 @@ public class C01_Examples {
     static WebDriver driver;
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         driver = new ChromeDriver();
         //Ilk once browser i maximise yapalim, sonra tum sayfa icin maximum bekleme suresi olarak 15 saniye belirtelim.
         driver.manage().window().maximize();

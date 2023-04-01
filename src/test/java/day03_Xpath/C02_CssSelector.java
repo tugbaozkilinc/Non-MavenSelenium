@@ -12,7 +12,6 @@ public class C02_CssSelector {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -48,7 +47,8 @@ public class C02_CssSelector {
         WebElement productPrice = driver.findElement(By.cssSelector("span[id='gc-live-preview-amount']"));
         if (productPrice.getText().equals("$25.00")) {
             System.out.println("Test PASSED");
-        } else System.out.println("Test FAILED");
+        }
+            else System.out.println("Test FAILED");
 
         //Sayfayi kapatin
         driver.close();

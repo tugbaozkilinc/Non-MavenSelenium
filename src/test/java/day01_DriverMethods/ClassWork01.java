@@ -7,7 +7,6 @@ public class ClassWork01 {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         //Amazon sayfasina gidelim. https://www.amazon.com/
         driver.get("https://www.amazon.com");

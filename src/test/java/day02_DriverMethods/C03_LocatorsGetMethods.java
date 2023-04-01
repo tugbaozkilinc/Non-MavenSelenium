@@ -12,7 +12,6 @@ public class C03_LocatorsGetMethods {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -20,10 +19,12 @@ public class C03_LocatorsGetMethods {
         driver.get("https://amazon.com");
 
         //Search bolumunu locate edip, iphone aratalim
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
+        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+        searchBox.sendKeys("iphone");
+        searchBox.submit();
 
         //Arama sonuc yazisini konsola yazdiralim.
-        WebElement element = driver.findElement(By.className("sg-col-inner")); //Amazon sayfasina gel=> 1-16 of 241 results for "iphone"=> "iphone" inspect
+        WebElement element = driver.findElement(By.className("sg-col-inner"));
         System.out.println(element.getText()); //1-16 of 241 results for "iphone"
 
         //Sayfayi kapatalim

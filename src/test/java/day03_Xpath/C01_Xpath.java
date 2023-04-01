@@ -11,10 +11,9 @@ public class C01_Xpath {
 
     public static void main(String[] args) throws InterruptedException {
 
-        //Note: Diger 6 locator HTML koduna baglidir; web elementin kodunda id yoksa By.id() methodunu web element link degilse By.linkText() methodunu kullanamazsiniz.
+        //Note: Diger 6 locator HTML koduna baglidir; web elementin kodunda id yoksa By.id() methodunu, web element link degilse By.linkText() methodunu kullanamazsiniz.
         //xpath() ise dinamiktir. Her turlu web element icin mutlaka bir xpath yazilabilir.
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -23,8 +22,7 @@ public class C01_Xpath {
 
         //2- Add Element butonuna basin
         Thread.sleep(3000);
-        //driver.findElement(By.xpath("//*[@onclick='addElement()']")).click();
-        WebElement addButton = driver.findElement(By.xpath("//*[text()='Add Element']")); //xpath kullaniminda locate edecegimiz web element text e sahipse bu sekilde kullanabiliriz.
+        WebElement addButton = driver.findElement(By.xpath("//*[.='Add Element']")); //xpath kullaniminda locate edecegimiz web element text e sahipse bu sekilde kullanabiliriz.
         addButton.click();
 
         //3- Delete butonu’nun gorunur oldugunu test edin

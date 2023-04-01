@@ -9,7 +9,6 @@ public class ClassWork02 {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize(); //Bunu sayfayı açtıktan sonra yapmayı alışkanlık haline getir, cunku butonlar arasında kaymalar olabilir.
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); //Bunu da aliskanlik haline getir. Her bir web elementin sayfaya gelme suresi var o yuzden beklemeliyiz,
