@@ -20,7 +20,7 @@ public class Homework03 {
         //2. Sign in buttonuna tiklayin
         driver.findElement(By.xpath("//*[@id='signin_button']")).click();
 
-        //3. Login alanina  "username" yazdirin
+        //3. Login alanina "username" yazdirin
         driver.findElement(By.cssSelector("input[id='user_login']")).sendKeys("username");
 
         //4. Password alanine "password" yazdirin

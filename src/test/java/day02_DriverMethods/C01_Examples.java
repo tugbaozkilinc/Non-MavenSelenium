@@ -13,7 +13,7 @@ public class C01_Examples {
     public static void main(String[] args) {
 
         driver = new ChromeDriver();
-        //Ilk once browser i maximise yapalim, sonra tum sayfa icin maximum bekleme suresi olarak 15 saniye belirtelim.
+        //Ilk once browser i maximize yapalim, sonra tum sayfa elementleri icin maximum bekleme suresi olarak 15 saniye belirtelim.
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 

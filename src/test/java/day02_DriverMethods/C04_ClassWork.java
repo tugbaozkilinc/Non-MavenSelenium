@@ -32,12 +32,11 @@ public class C04_ClassWork {
         System.out.println("Result number is: " + resultNumber[2]); //126
 
         //Sonuc sayisini lambda ile yazdiriniz.
-        Arrays.stream(searchResult.get(0).getText().split(" ")).limit(3).skip(2).forEach(System.out::println); //126
         Arrays.stream(resultNumber).limit(3).skip(2).forEach(System.out::println); //126
 
         //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
-        List<WebElement> firstWebElement = driver.findElements(By.className("s-image"));
-        firstWebElement.get(0).click();
+        List<WebElement> images = driver.findElements(By.className("s-image"));
+        images.get(0).click();
     }
 
 }

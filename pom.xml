@@ -21,7 +21,7 @@
             <artifactId>selenium-java</artifactId>
             <version>4.8.3</version>
         </dependency>
-        <!--            ADD WEB-DRIVER AS A DEPENDENCY -->
+        <!-- ADD WEB-DRIVER AS A DEPENDENCY -->
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>

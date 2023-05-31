@@ -27,7 +27,7 @@ public class Homework02 {
         String expectedTagName = "input";
         System.out.println(actualTagName.equals(expectedTagName) ? "TagName test PASSED" : "TagName test FAILED");
 
-        //Arama kutusunun name atributu'nun değerinin field-keywords olduğunu test ediniz
+        //Arama kutusunun name attribute 'nun değerinin field-keywords olduğunu test ediniz
         String actualAttributeValue = searchBox.getAttribute("name");
         String expectedAttributeValue = "field-keywords";
         System.out.println(actualAttributeValue.equals(expectedAttributeValue) ? "Attribute value test test PASSED" : "Attribute value test test FAILED");

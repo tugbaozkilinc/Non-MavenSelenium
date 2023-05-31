@@ -15,7 +15,7 @@ public class Homework03 {
         //Youtube ana sayfasina gidelim. https://www.youtube.com/
         driver.navigate().to("https://www.youtube.com/");
 
-        //Amazon soyfasina gidelim. https://www.amazon.com/
+        //Amazon sayfasina gidelim. https://www.amazon.com/
         driver.navigate().to("https://www.amazon.com/");
 
         //Tekrar YouTube'sayfasina donelim
@@ -25,9 +25,9 @@ public class Homework03 {
         driver.navigate().forward();
 
         //Sayfayi Refresh(yenile) yapalim
-        Thread.sleep(600);
+        Thread.sleep(1000);
         driver.navigate().refresh();
-        Thread.sleep(500);
+        Thread.sleep(1000);
 
         //Sayfayi kapatalim/Tum sayfalari kapatalim
         driver.close();

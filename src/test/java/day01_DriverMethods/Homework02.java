@@ -37,17 +37,17 @@ public class Homework02 {
         driver.navigate().back();
 
         //Sayfayi yenileyin
-        Thread.sleep(300);
+        Thread.sleep(3000);
         driver.navigate().refresh();
-        Thread.sleep(300);
+        Thread.sleep(3000);
 
         //Amazon sayfasina donun
         driver.navigate().forward();
 
         //Sayfayi tam sayfa yapin
-        Thread.sleep(300);
+        Thread.sleep(3000);
         driver.manage().window().fullscreen();
-        Thread.sleep(500);
+        Thread.sleep(5000);
 
         //Ardından sayfa başlığının "Amazon" içerip içermediğini (contains) doğrulayın, Yoksa doğru başlığı(Actual Title)yazdırın.
         String actualAmazonTitle = driver.getTitle();

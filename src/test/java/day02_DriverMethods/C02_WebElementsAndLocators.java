@@ -48,8 +48,9 @@ public class C02_WebElementsAndLocators {
         for(WebElement w : aTags){
             System.out.println(w.getText()); //Linkleri yazdirdik.
         }
+        driver.close();
 
-        //Not attribute un unique olup olmadıgını anlamak icin, inspect dedikten sonra ctrl+f e bas search butonuna gec. Mesela search butonuna id yazarsan sana 1 match geldigini gorursun.
+        //Note: attribute un unique olup olmadıgını anlamak icin, inspect dedikten sonra ctrl+f e bas search butonuna gec. Mesela search butonuna id yazarsan sana 1 match geldigini gorursun.
     }
 
 }
