@@ -1,11 +1,9 @@
 package day02_DriverMethods;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class C03_LocatorsGetMethods {

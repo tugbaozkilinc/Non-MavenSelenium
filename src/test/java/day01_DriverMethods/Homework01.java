@@ -4,7 +4,6 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class Homework01 {
@@ -19,7 +18,7 @@ public class Homework01 {
 
         //Sayfanin konumunu ve boyutlarini yazdirin.
         System.out.println("The position of the page is: " + driver.manage().window().getPosition());
-        System.out.println("The size of the page is:" + driver.manage().window().getSize());
+        System.out.println("The size of the page is: " + driver.manage().window().getSize());
 
         //Sayfanin konumunu ve boyutunu istediginiz sekilde ayarlayin
         driver.manage().window().setPosition(new Point(75, 0));

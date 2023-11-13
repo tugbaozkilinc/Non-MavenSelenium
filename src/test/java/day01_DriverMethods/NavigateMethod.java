@@ -2,7 +2,6 @@ package day01_DriverMethods;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class NavigateMethod {
@@ -13,7 +12,7 @@ public class NavigateMethod {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         //Amazon sayfasina gidelim
-        driver.navigate().to("https://amazon.com");
+        driver.get("https://amazon.com");
 
         //techproeducation sayfasina gidelim
         Thread.sleep(3000); //3 sn bekler

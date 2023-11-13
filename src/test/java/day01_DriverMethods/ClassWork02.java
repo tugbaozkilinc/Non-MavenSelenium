@@ -2,7 +2,6 @@ package day01_DriverMethods;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class ClassWork02 {
@@ -29,8 +28,9 @@ public class ClassWork02 {
         String actualUrl = driver.getCurrentUrl();
         if(actualUrl.contains("facebook")){
             System.out.println("Url test PASSED");
-        } else
+        } else {
             System.out.println("Url test FAILED. Actual url is: " + actualUrl);
+        }
 
         //https://www.walmart.com/ sayfasina gidin.
         driver.get("https://www.walmart.com");

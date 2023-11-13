@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -34,7 +33,7 @@ public class C02_CssSelector {
         driver.findElement(By.cssSelector("a[href='/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc']")).click();
 
         //Birthday butonuna basin
-        driver.findElement(By.cssSelector("img[alt='Birthday']")).click(); //img[@alt='Birthday']
+        driver.findElement(By.cssSelector("img[alt='Birthday']")).click();
 
         //Best Seller bolumunden ilk urunu tiklayin
         List<WebElement> bestSeller = driver.findElements(By.cssSelector("img[alt='Amazon.com eGift Card'"));

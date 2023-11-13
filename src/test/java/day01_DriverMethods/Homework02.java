@@ -2,7 +2,6 @@ package day01_DriverMethods;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class Homework02 {
@@ -57,7 +56,7 @@ public class Homework02 {
             System.out.println("Amazon title test FAILED. Actual title is: " + actualAmazonTitle);
         }
 
-        //Sayfa URL'sinin https://www.amazon.com/olup olmadığını doğrulayın, degilse doğru URL'yi yazdırın
+        //Sayfa URL'sinin https://www.amazon.com olup olmadığını doğrulayın, degilse doğru URL'yi yazdırın
         String actualAmazonUrl = driver.getCurrentUrl();
         String expectedAmazonUrl = "https://www.amazon.com";
         if(actualAmazonUrl.equals(expectedAmazonUrl)){
