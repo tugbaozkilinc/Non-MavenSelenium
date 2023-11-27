@@ -20,6 +20,7 @@ public class C02_RelativeLocators {
         WebElement NYCWebElement = driver.findElement(By.xpath("//*[@id='pid3_thumb']"));
         WebElement BayAreaWebElement = driver.findElement(By.xpath("//*[@id='pid8_thumb']"));
         WebElement BerlinWebElement = driver.findElement(with(By.tagName("li")).below(NYCWebElement).toLeftOf(BayAreaWebElement)); //ortak tag name; li, img
+                                                            //By.className("ui-li-has-thumb")
         BerlinWebElement.click();
         driver.close();
     }
